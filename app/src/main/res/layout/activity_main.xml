@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="54.60dp"
+        android:background="@color/puce"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginTop="-8dp">
+
+
+        <TextView
+            android:layout_width="270dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="13.00dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13.00dp"
+            android:layout_weight="1"
+            android:text="Explore"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:onClick="ringbtn"
+            android:layout_marginRight="23.40dp"
+            android:src="@drawable/notifications"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:id="@+id/refinebtn"
+                    android:layout_width="49dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#00000000"
+                    android:drawableStart="@drawable/filter"
+                    android:gravity="center"
+                    android:onClick="refinebtn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/searchView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="300dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border"
+                    android:backgroundTint="#F5F5EF"
+                    android:elevation="10dp"
+                    android:inputType="text"
+                    android:outlineSpotShadowColor="@color/black"
+                    android:queryHint="Search"
+                    android:searchIcon="@drawable/search"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="card1"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-black"
+                    android:text="+ Invite"
+                    android:textColor="@color/puce"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="left"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/person1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Micheal Murphy"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="San Francisco, within 1 km"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="15sp" />
+
+                <ProgressBar
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="180dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="60dp"
+                    android:progress="30"
+                    android:progressBackgroundTint="#C0C0C0"
+                    android:progressTint="@color/primary_sand"></ProgressBar>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Coffee ☕ | Friendship 💕| Hangout"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:onClick="card2"
+                app:cardMaxElevation="12dp"
+                android:clickable="true"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="+ Invite"
+                    android:textColor="@color/puce"
+                    android:clickable="true"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="left"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/person2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="top|left"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Nikhil Sharma"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cardview_dark_background"
+                    android:layout_gravity="top|left"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Los Angeles, within 1 km"
+                    android:textSize="15sp"
+                    />
+
+                <ProgressBar
+                    android:layout_width="180dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="110dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:progress="70"
+                    android:progressBackgroundTint="#C0C0C0"
+                    android:progressTint="@color/primary_sand">
+                </ProgressBar>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cardview_dark_background"
+                    android:layout_gravity="top|left"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="20dp"
+                    android:textStyle="bold"
+                    android:text="Coffee ☕| Movies 🎬| Swimming"
+                    android:textSize="15sp"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                android:clickable="true"
+                android:onClick="card3"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-black"
+                    android:text="+ Invite"
+                    android:textColor="@color/puce"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="left"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/person3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Steffy Dsouza"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="San Francisco, within 1 km"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="15sp" />
+
+                <ProgressBar
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="180dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="60dp"
+                    android:progress="90"
+                    android:progressBackgroundTint="#C0C0C0"
+                    android:progressTint="@color/primary_sand"></ProgressBar>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Trekking ⛰️| Travelling 🧭| Dinner"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:onClick="card4"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="+ Invite"
+                    android:textColor="@color/puce"
+                    android:clickable="true"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="left"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/person5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="top|left"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Monika Geller"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="41dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="New York, within 1 km"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="15sp" />
+
+                <ProgressBar
+                    android:layout_width="180dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="110dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:progress="20"
+                    android:progressBackgroundTint="#C0C0C0"
+                    android:progressTint="@color/primary_sand">
+                </ProgressBar>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cardview_dark_background"
+                    android:layout_gravity="top|left"
+                    android:textStyle="bold"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Cooking👩‍🍳 | Acting🎭 | Coffee"
+                    android:textSize="15sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:onClick="card5"
+                android:clickable="true"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="+ Invite"
+                    android:textColor="@color/puce"
+                    android:clickable="true"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img4"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="left"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/person4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="top|left"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="George Murphy"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cardview_dark_background"
+                    android:layout_gravity="top|left"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Paris, within 1 km"
+                    android:textSize="15sp"
+                    />
+
+                <ProgressBar
+                    android:layout_width="180dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="110dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:progress="10"
+                    android:progressBackgroundTint="#C0C0C0"
+                    android:progressTint="@color/primary_sand">
+                </ProgressBar>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cardview_dark_background"
+                    android:layout_gravity="top|left"
+                    android:textStyle="bold"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Coffee☕ | Movies🎬 | Reading"
+                    android:textSize="15sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/StoryBtnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52.00dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/storybuttonlayout"
+        android:elevation="78.00dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="ExtraText,ObsoleteLayoutParam">
+
+        <ImageView
+            android:id="@+id/ExploreBtn"
+            android:layout_width="104.00dp"
+            android:layout_height="28.60dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/explore"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+</RelativeLayout>
